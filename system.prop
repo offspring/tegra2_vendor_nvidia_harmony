@@ -1,0 +1,28 @@
+#
+# system.prop for tegra
+#
+
+#rild.libpath=/system/lib/libreference-ril.so
+#rild.libargs=-d /dev/ttyS0
+
+# we have no radio
+#ro.radio.use-ppp=no
+#ro.radio.noril=yes
+#ro.config.nocheckin=yes
+
+# density in DPI of the LCD of this board. This is used to scale the UI
+# appropriately. If this property is not defined, the default value is 160 dpi. 
+#ro.sf.lcd_density=120
+
+wifi.interface = wlan0
+# Time between scans in seconds. Keep it high to minimize battery drain.
+# This only affects the case in which there are remembered access points,
+# but none are in range.
+wifi.supplicant_scan_interval = 15
+
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number
+ro.opengles.version = 131072
+
+# This is a high density device with more memory, so larger vm heaps for it.
+dalvik.vm.heapsize=32m
